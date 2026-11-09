@@ -1,4 +1,7 @@
 // Ubah isi file ini kalau ada data baru. Tampilan akan ikut berubah otomatis.
+const BASE = import.meta.env.BASE_URL
+const img = (name) => `${BASE}projects/${name}` // gambar proyek ada di public/projects
+
 export const profile = {
   logo: 'trisinusgulo',
   name: 'Trisinus Gulo',
@@ -6,7 +9,7 @@ export const profile = {
   company: '',
   companyUrl: '#',
   intro: 'Lulusan D4 Teknik Informatika dengan pengalaman 1 tahun membangun aplikasi web di PT PAL Indonesia dan AirNav Indonesia.',
-  photo: `${import.meta.env.BASE_URL}foto.png`, 
+  photo: `${BASE}foto.png`,
   about: [
     'Saya lulusan D4 Teknik Informatika yang berminat di Full Stack Development. Saya terbiasa membangun frontend dan backend, merancang antarmuka, mengelola database, dan mengintegrasikan API dengan Laravel, React.js, PHP, JavaScript, dan MySQL.',
     'Saya teliti, bertanggung jawab, mudah berkolaborasi, dan cepat belajar. Saya siap berkontribusi sebagai Full Stack Developer.',
@@ -14,6 +17,7 @@ export const profile = {
   email: 'trisinusgulo6@gmail.com',
   github: 'https://github.com/Trisinus123',
   linkedin: 'https://www.linkedin.com/in/trisinus-gulo',
+  instagram: 'https://www.instagram.com/trisinus_gln/',
 }
 
 export const nav = [
@@ -30,16 +34,50 @@ export const skills = [
 export const filters = [['semua', 'Semua'], ['web', 'Web'], ['iot', 'IoT & Mobile']]
 
 const GH = 'https://github.com/Trisinus123'
+
+// image = nama file di folder public/projects. link kosong = tombol tidak muncul.
 export const projects = [
-  { title: 'Dashboard Keselamatan Penerbangan', type: 'web', desc: 'Dashboard pelaporan data safety untuk divisi operasional AirNav, dengan grafik dan peta real-time dari laporan Excel dan Google Sheets.', stack: 'React.js, Laravel, MySQL, Google Sheets API', link: '', linkText: '' },
-  { title: 'NavEvent', type: 'web', desc: 'Desain UI/UX platform manajemen acara internal AirNav: wireframe dan prototype di Figma.', stack: 'Figma', link: '', linkText: '' },
-  { title: 'Sistem Informasi Kesehatan Bengkel PAL', type: 'web', desc: 'Sistem kesehatan personel dengan dashboard analitik, CRUD, middleware otorisasi, dan enkripsi AES-256 untuk dokumen rahasia.', stack: 'Laravel, MySQL', link: '', linkText: '' },
-  { title: 'Website Lowongan Kerja UPA PKK', type: 'web', desc: 'Platform lowongan kerja dengan tiga peran (mahasiswa, perusahaan, admin), upload CV, verifikasi admin, dan notifikasi WhatsApp otomatis.', stack: 'Laravel, MySQL', link: GH, linkText: 'Lihat GitHub' },
-  { title: 'Smart Door Lock', type: 'iot', desc: 'Sistem keamanan pintu dengan kamera dan PIN: IoT ESP32, REST API, website React, dan aplikasi Flutter. Di-deploy dengan CI/CD di Google Cloud.', stack: 'ESP32, MQTT, React.js, Flutter', link: GH, linkText: 'Lihat GitHub' },
+  {
+    title: 'Operational Safety Dashboard',
+    type: 'web',
+    image: img('safety-login.jpg'),
+    desc: 'Aplikasi web yang memvisualisasikan data Operational Safety internal AirNav Indonesia, membantu pemangku kepentingan memantau tren keselamatan dan mengambil keputusan berbasis data. Dilengkapi grafik, tabel, dan peta interaktif, serta ringkasan 10.036 data kejadian dari 28 lokasi dan 63 kategori.',
+    link: '',
+    linkText: '',
+  },
+  {
+    title: 'CV Omega Art Inventory System',
+    type: 'web',
+    image: img('omega-art.jpg'),
+    desc: 'Aplikasi web untuk mengelola sistem inventaris CV Omega Art. Mengatur dan memantau barang masuk dan keluar untuk mendukung keputusan pengadaan dan penjualan, dengan akses berbasis peran untuk Admin, Staf Gudang, dan Estimator.',
+    link: '',
+    linkText: '',
+  },
+  {
+    title: 'Smart Door Lock',
+    type: 'iot',
+    image: img('doorlock.jpg'),
+    desc: 'Kunci pintu berbasis Internet of Things (IoT). PIN pintu dikelola jarak jauh lewat website admin, dengan manajemen pintu dan akses pengguna, log aktivitas dengan pencarian dan filter tanggal, serta dialog konfirmasi sebelum data diperbarui.',
+    link: GH,
+    linkText: 'Lihat GitHub',
+  },
+  {
+    title: 'Website Lowongan Kerja UPA PKK',
+    type: 'web',
+    image: img('upa-login.jpg'),
+    desc: 'Platform informasi lowongan kerja UPA PKK Politeknik Negeri Malang dengan tiga peran: mahasiswa, perusahaan, dan admin. Mencakup alur lamaran dengan upload CV, verifikasi lowongan oleh admin, dan notifikasi WhatsApp otomatis.',
+    link: GH,
+    linkText: 'Lihat GitHub',
+  },
 ]
 
 export const education = [
-  { title: 'D4 Teknik Informatika', place: 'Politeknik Negeri Malang, Agustus 2021 – Juli 2025', desc: 'IPK 3,41 dari 4,00.' },
+  {
+    title: 'D4 Teknik Informatika',
+    place: 'Politeknik Negeri Malang, Agustus 2021 – Juli 2025',
+    desc: 'IPK 3,41 dari 4,00.',
+    logo: `${BASE}logos/polinema.png`,
+  },
 ]
 
 // Isi link dengan alamat sertifikat/kredensial kalau ada. Kosong = tombol "Lihat" tidak muncul.

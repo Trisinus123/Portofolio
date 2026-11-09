@@ -1,20 +1,22 @@
 @import "tailwindcss";
 
-/* Warna tema (selalu putih). Ganti --accent kalau mau warna utama lain. */
+/* Warna tema. Ganti nilai di sini untuk mengubah warna seluruh halaman. */
 :root {
-  --bg: #fff;
-  --soft: #f5f3fc;
-  --ink: #12172b;
-  --muted: #5d6580;
-  --line: #e3e0f0;
-  --accent: #6538d6;
-  --accent-ink: #fff;
+  --bg: #ffffff;        /* latar bagian putih */
+  --alt: #f1f5fa;       /* latar bagian abu kebiruan (selang-seling) */
+  --soft: #ffffff;      /* warna kartu dan label */
+  --ink: #12172b;       /* warna teks utama */
+  --muted: #5d6580;     /* warna teks pendukung */
+  --line: #dde3ee;      /* warna garis */
+  --accent: #6538d6;    /* warna utama (ungu) */
+  --accent-ink: #fff;   /* warna teks di atas warna utama */
   color-scheme: light;
 }
 
-/* Daftarkan warna agar bisa dipakai sebagai class: bg-accent, text-muted, dst. */
+/* Daftarkan warna agar bisa dipakai sebagai class: bg-accent, bg-alt, text-muted, dst. */
 @theme inline {
   --color-bg: var(--bg);
+  --color-alt: var(--alt);
   --color-soft: var(--soft);
   --color-ink: var(--ink);
   --color-muted: var(--muted);
