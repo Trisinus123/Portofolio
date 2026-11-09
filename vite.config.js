@@ -1,0 +1,6 @@
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+import tailwindcss from '@tailwindcss/vite'
+
+// base './' supaya hasil build bisa jalan di GitHub Pages
+export default defineConfig({ plugins: [react(), tailwindcss()], base: './' })
