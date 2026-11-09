@@ -9,7 +9,7 @@ export const profile = {
   company: '',
   companyUrl: '#',
   intro: 'Lulusan D4 Teknik Informatika dengan pengalaman 1 tahun membangun aplikasi web di PT PAL Indonesia dan AirNav Indonesia.',
-  photo: `${BASE}foto.png`,
+  photo: `${import.meta.env.BASE_URL}foto.png`,
   about: [
     'Saya lulusan D4 Teknik Informatika yang berminat di Full Stack Development. Saya terbiasa membangun frontend dan backend, merancang antarmuka, mengelola database, dan mengintegrasikan API dengan Laravel, React.js, PHP, JavaScript, dan MySQL.',
     'Saya teliti, bertanggung jawab, mudah berkolaborasi, dan cepat belajar. Saya siap berkontribusi sebagai Full Stack Developer.',
